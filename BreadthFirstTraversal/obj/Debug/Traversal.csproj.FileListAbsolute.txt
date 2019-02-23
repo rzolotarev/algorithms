@@ -1,0 +1,7 @@
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\bin\Debug\BreadthFirstTraversal.exe.config
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\bin\Debug\BreadthFirstTraversal.exe
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\bin\Debug\BreadthFirstTraversal.pdb
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\obj\Debug\Traversal.csprojAssemblyReference.cache
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\obj\Debug\Traversal.csproj.CoreCompileInputs.cache
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\obj\Debug\BreadthFirstTraversal.exe
+C:\Users\Roman\source\repos\Algorithms\BreadthFirstTraversal\obj\Debug\BreadthFirstTraversal.pdb
