@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Traversal", "BreadthFirstTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopologicalSort", "TopologicalSort\TopologicalSort.csproj", "{54C74FB7-5FAE-442E-8A86-27F34197BC87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraShortestPathAlgorithm", "DijkstraShortestPathAlgorithm\DijkstraShortestPathAlgorithm.csproj", "{0021849C-49CA-4E3E-A227-6BCEBF922004}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{54C74FB7-5FAE-442E-8A86-27F34197BC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C74FB7-5FAE-442E-8A86-27F34197BC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C74FB7-5FAE-442E-8A86-27F34197BC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0021849C-49CA-4E3E-A227-6BCEBF922004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0021849C-49CA-4E3E-A227-6BCEBF922004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0021849C-49CA-4E3E-A227-6BCEBF922004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0021849C-49CA-4E3E-A227-6BCEBF922004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

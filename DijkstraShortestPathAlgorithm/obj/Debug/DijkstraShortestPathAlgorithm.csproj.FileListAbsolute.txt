@@ -1,0 +1,7 @@
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\obj\Debug\DijkstraShortestPathAlgorithm.csprojAssemblyReference.cache
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\obj\Debug\DijkstraShortestPathAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\bin\Debug\DijkstraShortestPathAlgorithm.exe.config
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\bin\Debug\DijkstraShortestPathAlgorithm.exe
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\bin\Debug\DijkstraShortestPathAlgorithm.pdb
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\obj\Debug\DijkstraShortestPathAlgorithm.exe
+C:\Users\Roman\source\repos\Algorithms\DijkstraShortestPathAlgorithm\obj\Debug\DijkstraShortestPathAlgorithm.pdb
