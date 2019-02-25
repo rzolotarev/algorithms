@@ -137,11 +137,11 @@ namespace DijkstraShortestPathAlgorithm
                 path.Push(currentPoint);
                 currentPoint = mapTable[currentPoint].PrecedingValue;
 
-                if (currentPoint == -1)
-                {
-                    Console.WriteLine("Sorry there is no path for this input parameters");
-                    return;
-                }
+                if (currentPoint != -1)
+                    continue;
+                
+                Console.WriteLine("Sorry there is no path for this input parameters");
+                return;
             }
 
             Console.Write("Path: " + startPoint);
