@@ -125,7 +125,9 @@ namespace DijkstraShortestPathAlgorithm
 
         public void GetShortestPathTo(int startPoint,int destinationPoint)
         {
-            
+            if (destinationPoint > adjList.Length)
+                return;
+
             var path = new Stack<int>();
             BuildMapTable(startPoint);
             var currentPoint = destinationPoint;
@@ -133,7 +135,6 @@ namespace DijkstraShortestPathAlgorithm
             while (currentPoint != startPoint)
             {
                 path.Push(currentPoint);
-               
                 currentPoint = mapTable[currentPoint].PrecedingValue;
 
                 if (currentPoint == -1)
