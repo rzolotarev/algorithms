@@ -8,8 +8,8 @@ namespace DijkstraShortestPathAlgorithm
 {
     public class Vertex
     {
-        public int Index;
-        public int Value;
+        public int Index { get; set; }
+        public int Value { get; set; }
 
         public Vertex(int v, int index)
         {

@@ -75,8 +75,7 @@ namespace DijkstraShortestPathAlgorithm
             while(queue.Count > 0)
             {
                 var currentVertex = queue.Dequeue();
-                var minValue = Int32.MaxValue;
-                var nextPoint = -1;
+                
                 foreach (var adjVertex in adjList[currentVertex])
                 {
                     if (visited.Contains(adjVertex.Index))
@@ -85,39 +84,32 @@ namespace DijkstraShortestPathAlgorithm
                     if (adjVertex.Value + mapTable[currentVertex].ShortestPath < mapTable[adjVertex.Index].ShortestPath)
                     {
                         mapTable[adjVertex.Index].ShortestPath = adjVertex.Value + mapTable[currentVertex].ShortestPath;
-                        mapTable[adjVertex.Index].PrecedingValue = currentVertex;
-                        if (mapTable[adjVertex.Index].ShortestPath < minValue)
-                        {
-                            minValue = mapTable[adjVertex.Index].ShortestPath;
-                            nextPoint = adjVertex.Index;
-                        }
-                            
+                        mapTable[adjVertex.Index].PrecedingValue = currentVertex;  
                     }
                 }
 
                 visited.Add(currentVertex);
-                if (nextPoint != -1)
-                    queue.Enqueue(nextPoint);
-                else
-                {
-                    if (TryToGetUnvisitedVertex(out int result))
-                        queue.Enqueue(result);
-                }
+                
+                if (TryToGetUnvisitedVertex(out int result))
+                    queue.Enqueue(result);
             }
         }
 
         private bool TryToGetUnvisitedVertex(out int result)
         {
             result = -1;
-            foreach (var vertex in Enumerable.Range(0, adjList.Length))
+
+            var orderedByLength = mapTable.OrderBy(r => r.ShortestPath);
+
+            foreach(var closedVertex in orderedByLength)
             {
-                if (visited.Contains(vertex))
+                if (visited.Contains(closedVertex.CurrentVertex))
                     continue;
-                
-                result = vertex;
+
+                result = closedVertex.CurrentVertex;
                 return true;
             }
-                
+
             return false;
         }
 

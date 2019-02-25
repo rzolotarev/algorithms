@@ -11,7 +11,7 @@ namespace DijkstraShortestPathAlgorithm
         static void Main(string[] args)
         {
             var gp = new Graph();
-            gp.GetShortestPathTo(0, 4);
+            gp.GetShortestPathTo(0, 2);
         }
     }
 }
