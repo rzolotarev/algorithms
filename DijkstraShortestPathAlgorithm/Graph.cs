@@ -78,14 +78,14 @@ namespace DijkstraShortestPathAlgorithm
                 
                 foreach (var adjVertex in adjList[currentVertex])
                 {
-                    if (visited.Contains(adjVertex.Index))
+                    if (VertexAlreadyVisited(adjVertex.Index))
                         continue;
 
-                    if (adjVertex.Value + mapTable[currentVertex].ShortestPath < mapTable[adjVertex.Index].ShortestPath)
-                    {
-                        mapTable[adjVertex.Index].ShortestPath = adjVertex.Value + mapTable[currentVertex].ShortestPath;
-                        mapTable[adjVertex.Index].PrecedingValue = currentVertex;  
-                    }
+                    if (!NewPathShorter(currentVertex, adjVertex))
+                        continue;
+                    
+                    mapTable[adjVertex.Index].ShortestPath = adjVertex.Value + mapTable[currentVertex].ShortestPath;
+                    mapTable[adjVertex.Index].PrecedingValue = currentVertex;  
                 }
 
                 visited.Add(currentVertex);
@@ -93,6 +93,16 @@ namespace DijkstraShortestPathAlgorithm
                 if (TryToGetUnvisitedVertex(out int result))
                     queue.Enqueue(result);
             }
+        }
+
+        private bool NewPathShorter(int consideredVertex, Vertex adjacentVertex)
+        {
+            return adjacentVertex.Value + mapTable[consideredVertex].ShortestPath < mapTable[adjacentVertex.Index].ShortestPath;
+        }
+
+        private bool VertexAlreadyVisited(int currentVertex)
+        {
+            return visited.Contains(currentVertex);
         }
 
         private bool TryToGetUnvisitedVertex(out int result)
