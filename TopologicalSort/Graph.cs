@@ -80,5 +80,34 @@ namespace TopologicalSort
 
             stack.Push(vertex);
         }
+
+        public bool IsAcyclicGraph()
+        {
+
+            foreach(var element in Enumerable.Range(0, adjList.Length))
+            {
+                if (ContainsCircle(element, element))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private bool ContainsCircle(int origVertex, int currentLoopVertex)
+        {
+            var adjacentList = adjList[currentLoopVertex];
+            foreach(var currentVertex in adjacentList)
+            {
+                if (currentVertex.Value == origVertex)
+                    return true;
+
+                return ContainsCircle(origVertex, currentVertex.Value);
+                //var adjacentListOfAdjacentVertex = adjList[currentVertex.Value];
+                //foreach (var nestedItem in adjacentListOfAdjacentVertex)
+                //    return ContainsCircle(origVertex, nestedItem.Value);
+            }
+
+            return false;
+        }
     }
 }
